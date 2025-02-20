@@ -12,6 +12,14 @@
 	letter-spacing: .05em;
 }
 
+@mixin text-md($font-weight:700) {
+	font-family: $font-family-base;
+	font-size: 16px;
+	font-weight: $font-weight;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+}
+
 // Icons
 
 @mixin icon-square($size) {
