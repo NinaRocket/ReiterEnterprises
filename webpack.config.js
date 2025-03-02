@@ -61,15 +61,20 @@ module.exports = {
     ],
   },
   optimization: {
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /[\\/](node_modules)[\\/].+\.js$/,
+    //       name: 'vendor',
+    //       chunks: 'all',
+    //     },
+    //   },
+    // },
     splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/](node_modules)[\\/].+\.js$/,
-          name: 'vendor',
-          chunks: 'all',
-        },
-      },
+      chunks: 'all',
+      maxSize: 250000, // Set limit to 250 KB per chunk
     },
+    
     minimizer: [
       new CssMinimizerPlugin(),
       new TerserPlugin({
