@@ -10,16 +10,18 @@ const package = require('./package.json');
 
 const paths = {
   src: {
+    documents: './src/documents',
     favicon: './src/favicon',
     img: './src/img',
     js: './src/js',
-    scss: './src/scss',
+    scss: './src/scss'
   },
   dist: {
+    documents: './assets/documents',
     css: './assets/css',
     favicon: './assets/favicon',
     img: './assets/img',
-    js: './assets/js',
+    js: './assets/js'
   },
 };
 
@@ -95,6 +97,10 @@ module.exports = {
         {
           from: paths.src.img,
           to: paths.dist.img,
+        },
+        {
+          from: paths.src.documents,
+          to: paths.dist.documents,
         },
       ],
     }),
